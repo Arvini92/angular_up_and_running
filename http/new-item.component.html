@@ -1,0 +1,14 @@
+<section *ngIf="newItem">
+<h2>{{newItem.title}}</h2>
+<div>{{newItem.image}}</div>
+
+<div class="tools">
+  
+  <a class="delete" (click)="onDelete()">
+    -
+  </a>
+  <a class="add" (click)="onAdd()">
+    +
+  </a>
+</div>
+</section>

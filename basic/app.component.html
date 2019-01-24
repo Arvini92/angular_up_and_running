@@ -1,0 +1,56 @@
+<section>
+  <header>
+    
+    <div>name: {{name}} </div>
+    <div>name: {{bin}} </div>
+    <div *ngIf ="name">name: {{name}} </div>
+  <ul>
+    <li (click)="onClick(artist)" *ngFor="let artist of artists">
+      <h2>{{artist.name}}</h2>
+      <h2>{{artist.school}}</h2>
+    </li>
+</ul>
+   <div (click)="onDclick($event)">hg</div>
+   <div (click)="onBclick()">hg</div>
+
+   <label>fddfg</label>
+   <input #newArtist
+   (keyup.enter)="addArtist(newArtist.value); newArtist.value=''"
+   (blur)="addArtist(newArtist.value)">
+   <button (click)="addArtist(newArtist.value)">add</button>
+
+   <div [innerHTML]="'name:' + name"> </div>
+    <div bind-innerHTML="'name:' + name"> </div>
+
+ <ul>
+    <li #artistContainer (click)="onTclick(artist, artistContainer)" *ngFor="let artist of artists">
+      <h2>{{artist.name}}</h2>
+      <h2>{{artist.school}}</h2>
+    </li>
+</ul>
+
+<input [value]="name"
+(input)="name=$event.target.value"
+>
+<input (ngModel)="name">
+
+<ul>
+    <li  *ngFor="let artisti of artistis">
+      <h2>{{artisti.name}}</h2>
+      <h2>{{artisti.school}}</h2>
+    </li>
+</ul>
+<label>{{query}} </label>
+<input (ngModel)="query" placeholder="name">
+
+<ul class="artistlist cf">
+  <li class="artist cf" #artistContainer (click)="onTclick(artist, artistContainer)" *ngFor="let artist of artists">
+    <artist-item class="content" [artist]=item></artist-item>
+  </li>
+</ul>
+
+  </header>
+</section>
+
+
+    

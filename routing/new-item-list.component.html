@@ -1,0 +1,8 @@
+<section>
+  <new-item 
+    [ngClass] = "{'medium-movies': newItem.title==='Anna', 'medium-series': newItem.title==='Tanya'}"
+    *ngFor="let newItem of newItems"
+    [newItem]="newItem"
+    (delete)="onNewItemDelete($event)"
+    (add)="onNewItemAdd($event)"></new-item>
+</section>
